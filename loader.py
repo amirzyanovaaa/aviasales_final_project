@@ -5,4 +5,3 @@ from services.client import Client
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 amadeus_client = Client()
-

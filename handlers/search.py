@@ -22,8 +22,8 @@ async def process_origin(message: types.Message, state: FSMContext):
     iata_code = get_iata_code(user_input)
     if iata_code:
         await state.update_data(origin=iata_code)
-        await message.answer(f"✅ Найден аэропорт: {iata_code}")
-        await message.answer("Введите город или код пункта назначения:")
+        await message.answer(f"Найден аэропорт: {iata_code}")
+        await message.answer("Введите название города прибытия:")
         await state.set_state(SearchFlight.destination)
         return
 
@@ -33,8 +33,8 @@ async def process_destination(message: types.Message, state: FSMContext):
     iata_code = get_iata_code(user_input)
     if iata_code:
         await state.update_data(destination=iata_code)
-        await message.answer(f"✅ Найден аэропорт: {iata_code}")
-        await message.answer("Введите дату вылета (ГГГГ-ММ-ДД):")
+        await message.answer(f"Найден аэропорт: {iata_code}")
+        await message.answer("Введите дату отправления (ГГГГ-ММ-ДД):")
         await state.set_state(SearchFlight.date)
         return
 
@@ -74,4 +74,3 @@ async def process_date(message: types.Message, state: FSMContext):
         await message.answer("Поиск завершен.", reply_markup=kb.get_main_menu())
 
     await state.set_state(None)
-

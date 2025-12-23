@@ -15,7 +15,7 @@ AIRLINES = [
 ]
 
 
-@router.message(F.text == "📖 Проверить бронь")
+@router.message(F.text == "Проверить бронь")
 async def start_booking_check(message: types.Message, state: FSMContext):
     await message.answer(
         "Введите номер бронирования (PNR).\n"
@@ -29,7 +29,6 @@ async def process_booking_code(message: types.Message, state: FSMContext):
     code = message.text.strip().upper()
 
     found_airline = None
-    # Ищем по первым двум буквам
     if len(code) >= 2:
         prefix = code[:2]
         for airline in AIRLINES:

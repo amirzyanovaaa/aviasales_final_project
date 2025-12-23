@@ -24,7 +24,7 @@ async def callback_add_fav(callback: types.CallbackQuery, state: FSMContext):
         await callback.answer("Данные устарели, повторите поиск ")
 
 
-@router.message(F.text == " Избранное")
+@router.message(F.text == "Избранное")
 async def show_favorites(message: types.Message):
     favorites = await get_favorites(message.from_user.id)
 

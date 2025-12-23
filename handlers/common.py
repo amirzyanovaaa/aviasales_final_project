@@ -3,7 +3,7 @@ from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 import final_project.keyboards as kb
 
-from database.requests import add_user
+from final_project.database.requests import add_user
 
 router = Router()
 
