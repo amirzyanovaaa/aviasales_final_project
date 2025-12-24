@@ -1,5 +1,5 @@
 import pytest
-from final_project.iata import find_airports_by_query, get_airport_info_by_iata, get_city_airports
+from iata import find_airports_by_query, get_airport_info_by_iata, get_city_airports
 
 
 def get_iata_code_compat(search_query):

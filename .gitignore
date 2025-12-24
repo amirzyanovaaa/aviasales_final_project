@@ -1,5 +1,5 @@
 lectures_build/
-.idea/
+../.idea/
 build/
 .DS_Store
 .vscode/
@@ -121,3 +121,7 @@ hse_env/
 
 *.pyc
 *.sqlite3
+
+!requirements.txt
+!Dockerfile
+!.dockerignore

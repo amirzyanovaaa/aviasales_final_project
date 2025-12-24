@@ -1,7 +1,7 @@
 from aiogram import Router, types, F
 from aiogram.fsm.context import FSMContext
-from final_project.database.requests import add_favorite, get_favorites, delete_favorite
-import final_project.keyboards as kb
+from database.requests import add_favorite, get_favorites, delete_favorite
+import keyboards as kb
 
 router = Router()
 

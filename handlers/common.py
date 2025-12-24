@@ -1,9 +1,9 @@
 from aiogram import Router, types, F
 from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
-import final_project.keyboards as kb
+import keyboards as kb
 
-from final_project.database.requests import add_user
+from database.requests import add_user
 
 router = Router()
 

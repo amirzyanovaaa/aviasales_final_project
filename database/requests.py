@@ -1,4 +1,4 @@
-from final_project.database.models import async_session, User, Favorite
+from database.models import async_session, User, Favorite
 from sqlalchemy import select, delete
 
 

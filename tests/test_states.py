@@ -1,4 +1,4 @@
-from final_project.states import SearchFlight, CheckBooking
+from states import SearchFlight, CheckBooking
 
 def test_states():
     assert SearchFlight.origin

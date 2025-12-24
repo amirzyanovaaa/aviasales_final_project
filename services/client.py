@@ -1,7 +1,6 @@
 import requests
 from typing import List, Dict, Any
-from final_project.config import AMADEUS_API_KEY, AMADEUS_API_SECRET, AMADEUS_BASE_URL
-
+from config import AMADEUS_API_KEY, AMADEUS_API_SECRET, AMADEUS_BASE_URL
 
 class Client:
     def __init__(self):
@@ -113,3 +112,4 @@ class Client:
             }
         except Exception:
             return None
+

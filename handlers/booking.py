@@ -1,6 +1,6 @@
 from aiogram import Router, types, F
 from aiogram.fsm.context import FSMContext
-from final_project.states import CheckBooking
+from states import CheckBooking
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 

@@ -1,7 +1,7 @@
 import pytest
 import requests
 from unittest.mock import MagicMock, patch
-from final_project.services.client import Client
+from ..services.client import Client
 
 @pytest.fixture
 def client():

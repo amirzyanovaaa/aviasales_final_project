@@ -2,10 +2,10 @@ import re
 from aiogram import Router, types, F
 from aiogram.fsm.context import FSMContext
 
-from final_project.states import SearchFlight
-from final_project.loader import amadeus_client
-from final_project import keyboards as kb
-from final_project.iata import find_airports_by_query, get_airport_info_by_iata
+from states import SearchFlight
+from loader import amadeus_client
+import keyboards as kb
+from iata import find_airports_by_query, get_airport_info_by_iata
 
 
 router = Router()

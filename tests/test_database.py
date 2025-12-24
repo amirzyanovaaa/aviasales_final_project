@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import patch
-from final_project.database.requests import add_user, add_favorite, get_favorites, delete_favorite
-from final_project.database.models import User, Favorite
+from database.requests import add_user, add_favorite, get_favorites, delete_favorite
+from database.models import User, Favorite
 from sqlalchemy import select
 
 class MockSessionContext:
