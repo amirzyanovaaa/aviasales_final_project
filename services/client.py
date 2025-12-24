@@ -95,13 +95,16 @@ class Client:
             departure_at = first_segment.get('departure', {}).get('at', '')
             arrival_at = last_segment.get('arrival', {}).get('at', '')
 
+            if not departure_at or not arrival_at:
+                raise ValueError("Missing departure or arrival time")
+
             return {
                 'origin': origin.upper(),
                 'destination': destination.upper(),
-                'departure_date': departure_at[:10] if departure_at else "2024-01-15",
-                'departure_time': departure_at[11:16] if departure_at else "10:00",
-                'arrival_date': arrival_at[:10] if arrival_at else "2024-01-15",
-                'arrival_time': arrival_at[11:16] if arrival_at else "12:00",
+                'departure_date': departure_at[:10],
+                'departure_time': departure_at[11:16] ,
+                'arrival_date': arrival_at[:10] ,
+                'arrival_time': arrival_at[11:16] ,
                 'airline': first_segment.get('carrierCode', 'SU' if origin == 'SVO' else 'AY'),
                 'flight_number': f"{first_segment.get('carrierCode', 'SU')}{first_segment.get('number', '1234')}",
                 'price': float(price_info.get('total', 15000)),
